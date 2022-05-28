@@ -15,7 +15,7 @@ https://github.com/ohmyzsh/ohmyzsh
 ```
 https://github.com/romkatv/powerlevel10k#oh-my-zsh
 ```
-#### Install Font: saucecodepro nerd font mono regular | DejaVu Sans Mono for Powerline
+#### Install Font: Sauce Code Pro Nerd Font Complete Mono | DejaVu Sans Mono for Powerline
 ```
 https://github.com/ryanoasis/nerd-fonts
 ```
