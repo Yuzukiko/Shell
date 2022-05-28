@@ -20,3 +20,8 @@ https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/
 ```
 sudo apt-get install fonts-powerline
 ```
+
+Update zshrc file
+```
+curl https://raw.githubusercontent.com/yuzukiko/Shell/main/.zshrc > ~/.zshrc
+```
