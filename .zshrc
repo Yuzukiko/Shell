@@ -16,7 +16,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -38,7 +38,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -59,7 +59,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git kubectl kubectx Kube-ps1 docker docker-compose macos pip python sudo timer systemadmin)
+plugins=(git kubectl kubectx Kube-ps1 docker docker-compose macos pip python pipenv sudo timer systemadmin 1password ansible helm last-working-dir)
+
 
 #autoload -U +X compinit && compinit
 source $ZSH/oh-my-zsh.sh
@@ -79,8 +80,12 @@ fi
 
 #aliases
 alias ls="ls -la --color=always"
+alias 'ls -la'="ls -la --color=always"
+alias kubectl="kubecolor"
 
-#source <(kubectl completion zsh)
+#completions
+source <(kubectl completion zsh)
+source <(flux completion zsh)
 
 #homebrew
 if type brew &>/dev/null
